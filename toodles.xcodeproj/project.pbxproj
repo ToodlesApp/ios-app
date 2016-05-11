@@ -13,6 +13,28 @@
 		0450150B1CDAD8D1002FB50D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045015091CDAD8D1002FB50D /* Main.storyboard */; };
 		0450150D1CDAD8D1002FB50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0450150C1CDAD8D1002FB50D /* Assets.xcassets */; };
 		045015101CDAD8D1002FB50D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0450150E1CDAD8D1002FB50D /* LaunchScreen.storyboard */; };
+		0450151B1CDAD98C002FB50D /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450151A1CDAD98C002FB50D /* Business.swift */; };
+		0450151D1CDAD9C3002FB50D /* BusinessContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450151C1CDAD9C3002FB50D /* BusinessContact.swift */; };
+		0450151F1CDADA1B002FB50D /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450151E1CDADA1B002FB50D /* PhoneNumber.swift */; };
+		045015221CDADFB0002FB50D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015211CDADFB0002FB50D /* StringExtension.swift */; };
+		045015241CDAE67C002FB50D /* BusinessLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015231CDAE67C002FB50D /* BusinessLocation.swift */; };
+		045015261CDAE6B1002FB50D /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015251CDAE6B1002FB50D /* Address.swift */; };
+		045015291CDAF731002FB50D /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015281CDAF731002FB50D /* Country.swift */; };
+		0450152B1CDAF753002FB50D /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450152A1CDAF753002FB50D /* State.swift */; };
+		0450152E1CDAF9BA002FB50D /* AddressError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450152D1CDAF9BA002FB50D /* AddressError.swift */; };
+		045015301CDAF9DE002FB50D /* PhoneNumberError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450152F1CDAF9DE002FB50D /* PhoneNumberError.swift */; };
+		045015321CDAFA08002FB50D /* BusinessContactError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015311CDAFA08002FB50D /* BusinessContactError.swift */; };
+		045015341CDAFA2F002FB50D /* BusinessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015331CDAFA2F002FB50D /* BusinessError.swift */; };
+		045015361CDAFF6E002FB50D /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015351CDAFF6E002FB50D /* Coupon.swift */; };
+		045015381CDAFFE6002FB50D /* Booklet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015371CDAFFE6002FB50D /* Booklet.swift */; };
+		0450153A1CDB0014002FB50D /* CouponUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015391CDB0014002FB50D /* CouponUse.swift */; };
+		0450153C1CDB0032002FB50D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450153B1CDB0032002FB50D /* User.swift */; };
+		0450153E1CDB00C7002FB50D /* CouponTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450153D1CDB00C7002FB50D /* CouponTag.swift */; };
+		045015401CDB039F002FB50D /* DatabaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450153F1CDB039F002FB50D /* DatabaseObject.swift */; };
+		045015421CDB093A002FB50D /* CouponError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015411CDB093A002FB50D /* CouponError.swift */; };
+		045015441CDB0B5D002FB50D /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015431CDB0B5D002FB50D /* NSDateExtension.swift */; };
+		04E802F81CDDAC9100333179 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E802F71CDDAC9100333179 /* LogInViewController.swift */; };
+		04E802FA1CDDB83900333179 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E802F91CDDB83900333179 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +46,28 @@
 		0450150C1CDAD8D1002FB50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0450150F1CDAD8D1002FB50D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045015111CDAD8D1002FB50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0450151A1CDAD98C002FB50D /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		0450151C1CDAD9C3002FB50D /* BusinessContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessContact.swift; sourceTree = "<group>"; };
+		0450151E1CDADA1B002FB50D /* PhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
+		045015211CDADFB0002FB50D /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		045015231CDAE67C002FB50D /* BusinessLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessLocation.swift; sourceTree = "<group>"; };
+		045015251CDAE6B1002FB50D /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		045015281CDAF731002FB50D /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		0450152A1CDAF753002FB50D /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		0450152D1CDAF9BA002FB50D /* AddressError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressError.swift; sourceTree = "<group>"; };
+		0450152F1CDAF9DE002FB50D /* PhoneNumberError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberError.swift; sourceTree = "<group>"; };
+		045015311CDAFA08002FB50D /* BusinessContactError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessContactError.swift; sourceTree = "<group>"; };
+		045015331CDAFA2F002FB50D /* BusinessError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessError.swift; sourceTree = "<group>"; };
+		045015351CDAFF6E002FB50D /* Coupon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
+		045015371CDAFFE6002FB50D /* Booklet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booklet.swift; sourceTree = "<group>"; };
+		045015391CDB0014002FB50D /* CouponUse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponUse.swift; sourceTree = "<group>"; };
+		0450153B1CDB0032002FB50D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0450153D1CDB00C7002FB50D /* CouponTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponTag.swift; sourceTree = "<group>"; };
+		0450153F1CDB039F002FB50D /* DatabaseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseObject.swift; sourceTree = "<group>"; };
+		045015411CDB093A002FB50D /* CouponError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponError.swift; sourceTree = "<group>"; };
+		045015431CDB0B5D002FB50D /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
+		04E802F71CDDAC9100333179 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		04E802F91CDDB83900333179 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +100,109 @@
 		045015021CDAD8D1002FB50D /* toodles */ = {
 			isa = PBXGroup;
 			children = (
+				045015461CDC2B63002FB50D /* Utilities */,
+				045015451CDC2B52002FB50D /* DataAccessObjects */,
+				045015271CDAF717002FB50D /* Enums */,
+				045015201CDADF9E002FB50D /* Extensions */,
+				045015191CDAD8FA002FB50D /* Controllers */,
+				045015181CDAD8F1002FB50D /* Views */,
+				045015171CDAD8E0002FB50D /* Models */,
 				045015031CDAD8D1002FB50D /* AppDelegate.swift */,
-				045015051CDAD8D1002FB50D /* FirstViewController.swift */,
-				045015071CDAD8D1002FB50D /* SecondViewController.swift */,
 				045015091CDAD8D1002FB50D /* Main.storyboard */,
 				0450150C1CDAD8D1002FB50D /* Assets.xcassets */,
 				0450150E1CDAD8D1002FB50D /* LaunchScreen.storyboard */,
 				045015111CDAD8D1002FB50D /* Info.plist */,
 			);
 			path = toodles;
+			sourceTree = "<group>";
+		};
+		045015171CDAD8E0002FB50D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				045015471CDC2C31002FB50D /* DatabaseObjects */,
+				0450151E1CDADA1B002FB50D /* PhoneNumber.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		045015181CDAD8F1002FB50D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		045015191CDAD8FA002FB50D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				045015051CDAD8D1002FB50D /* FirstViewController.swift */,
+				045015071CDAD8D1002FB50D /* SecondViewController.swift */,
+				04E802F71CDDAC9100333179 /* LogInViewController.swift */,
+				04E802F91CDDB83900333179 /* SignUpViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		045015201CDADF9E002FB50D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				045015211CDADFB0002FB50D /* StringExtension.swift */,
+				045015431CDB0B5D002FB50D /* NSDateExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		045015271CDAF717002FB50D /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				0450152C1CDAF9B0002FB50D /* ErrorTypes */,
+				045015281CDAF731002FB50D /* Country.swift */,
+				0450152A1CDAF753002FB50D /* State.swift */,
+			);
+			name = Enums;
+			sourceTree = "<group>";
+		};
+		0450152C1CDAF9B0002FB50D /* ErrorTypes */ = {
+			isa = PBXGroup;
+			children = (
+				0450152D1CDAF9BA002FB50D /* AddressError.swift */,
+				0450152F1CDAF9DE002FB50D /* PhoneNumberError.swift */,
+				045015311CDAFA08002FB50D /* BusinessContactError.swift */,
+				045015331CDAFA2F002FB50D /* BusinessError.swift */,
+				045015411CDB093A002FB50D /* CouponError.swift */,
+			);
+			name = ErrorTypes;
+			sourceTree = "<group>";
+		};
+		045015451CDC2B52002FB50D /* DataAccessObjects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataAccessObjects;
+			sourceTree = "<group>";
+		};
+		045015461CDC2B63002FB50D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		045015471CDC2C31002FB50D /* DatabaseObjects */ = {
+			isa = PBXGroup;
+			children = (
+				045015251CDAE6B1002FB50D /* Address.swift */,
+				045015371CDAFFE6002FB50D /* Booklet.swift */,
+				0450151A1CDAD98C002FB50D /* Business.swift */,
+				0450151C1CDAD9C3002FB50D /* BusinessContact.swift */,
+				045015231CDAE67C002FB50D /* BusinessLocation.swift */,
+				045015351CDAFF6E002FB50D /* Coupon.swift */,
+				0450153D1CDB00C7002FB50D /* CouponTag.swift */,
+				045015391CDB0014002FB50D /* CouponUse.swift */,
+				0450153F1CDB039F002FB50D /* DatabaseObject.swift */,
+				0450153B1CDB0032002FB50D /* User.swift */,
+			);
+			name = DatabaseObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +277,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045015261CDAE6B1002FB50D /* Address.swift in Sources */,
+				0450152E1CDAF9BA002FB50D /* AddressError.swift in Sources */,
+				045015241CDAE67C002FB50D /* BusinessLocation.swift in Sources */,
+				0450151D1CDAD9C3002FB50D /* BusinessContact.swift in Sources */,
+				04E802FA1CDDB83900333179 /* SignUpViewController.swift in Sources */,
+				045015441CDB0B5D002FB50D /* NSDateExtension.swift in Sources */,
+				0450152B1CDAF753002FB50D /* State.swift in Sources */,
+				045015341CDAFA2F002FB50D /* BusinessError.swift in Sources */,
+				045015301CDAF9DE002FB50D /* PhoneNumberError.swift in Sources */,
+				045015221CDADFB0002FB50D /* StringExtension.swift in Sources */,
+				045015401CDB039F002FB50D /* DatabaseObject.swift in Sources */,
 				045015081CDAD8D1002FB50D /* SecondViewController.swift in Sources */,
+				045015381CDAFFE6002FB50D /* Booklet.swift in Sources */,
 				045015041CDAD8D1002FB50D /* AppDelegate.swift in Sources */,
+				045015321CDAFA08002FB50D /* BusinessContactError.swift in Sources */,
+				045015361CDAFF6E002FB50D /* Coupon.swift in Sources */,
+				0450153A1CDB0014002FB50D /* CouponUse.swift in Sources */,
+				0450153E1CDB00C7002FB50D /* CouponTag.swift in Sources */,
 				045015061CDAD8D1002FB50D /* FirstViewController.swift in Sources */,
+				0450151B1CDAD98C002FB50D /* Business.swift in Sources */,
+				045015291CDAF731002FB50D /* Country.swift in Sources */,
+				04E802F81CDDAC9100333179 /* LogInViewController.swift in Sources */,
+				0450151F1CDADA1B002FB50D /* PhoneNumber.swift in Sources */,
+				045015421CDB093A002FB50D /* CouponError.swift in Sources */,
+				0450153C1CDB0032002FB50D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +453,7 @@
 				045015161CDAD8D1002FB50D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
