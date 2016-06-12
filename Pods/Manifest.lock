@@ -1,0 +1,12 @@
+PODS:
+  - EZLoadingActivity (0.8)
+
+DEPENDENCIES:
+  - EZLoadingActivity
+
+SPEC CHECKSUMS:
+  EZLoadingActivity: 6fd75a05765a4085f4b6fef6f62edf9f144b3139
+
+PODFILE CHECKSUM: 4a39db2e09d566b4b224bbf9e358c809c9fc78ef
+
+COCOAPODS: 1.0.0

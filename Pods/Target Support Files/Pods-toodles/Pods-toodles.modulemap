@@ -1,0 +1,6 @@
+framework module Pods_toodles {
+  umbrella header "Pods-toodles-umbrella.h"
+
+  export *
+  module * { export * }
+}

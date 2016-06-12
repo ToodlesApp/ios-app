@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		045015041CDAD8D1002FB50D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015031CDAD8D1002FB50D /* AppDelegate.swift */; };
-		045015061CDAD8D1002FB50D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015051CDAD8D1002FB50D /* FirstViewController.swift */; };
-		045015081CDAD8D1002FB50D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015071CDAD8D1002FB50D /* SecondViewController.swift */; };
 		0450150B1CDAD8D1002FB50D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045015091CDAD8D1002FB50D /* Main.storyboard */; };
 		0450150D1CDAD8D1002FB50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0450150C1CDAD8D1002FB50D /* Assets.xcassets */; };
 		045015101CDAD8D1002FB50D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0450150E1CDAD8D1002FB50D /* LaunchScreen.storyboard */; };
@@ -33,15 +31,19 @@
 		045015401CDB039F002FB50D /* DatabaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450153F1CDB039F002FB50D /* DatabaseObject.swift */; };
 		045015421CDB093A002FB50D /* CouponError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015411CDB093A002FB50D /* CouponError.swift */; };
 		045015441CDB0B5D002FB50D /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015431CDB0B5D002FB50D /* NSDateExtension.swift */; };
+		045305351D0A632B004148A0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045305341D0A632B004148A0 /* SWRevealViewController.m */; };
+		045305371D0A64D7004148A0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045305361D0A64D7004148A0 /* MainViewController.swift */; };
+		04724E781CF1697C00E9D790 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04724E771CF1697C00E9D790 /* APICaller.swift */; };
+		04AFD3421CF275F000FF6DE9 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFD3411CF275F000FF6DE9 /* UserDAO.swift */; };
+		04AFD3441CF282E000FF6DE9 /* APICallerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFD3431CF282E000FF6DE9 /* APICallerError.swift */; };
 		04E802F81CDDAC9100333179 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E802F71CDDAC9100333179 /* LogInViewController.swift */; };
 		04E802FA1CDDB83900333179 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E802F91CDDB83900333179 /* SignUpViewController.swift */; };
+		F577E0C223C0F7E40E3EB1A9 /* Pods_toodles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2EC6DB2058FAFA71D72947 /* Pods_toodles.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		045015001CDAD8D1002FB50D /* toodles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toodles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045015031CDAD8D1002FB50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		045015051CDAD8D1002FB50D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		045015071CDAD8D1002FB50D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		0450150A1CDAD8D1002FB50D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0450150C1CDAD8D1002FB50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0450150F1CDAD8D1002FB50D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,8 +68,18 @@
 		0450153F1CDB039F002FB50D /* DatabaseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseObject.swift; sourceTree = "<group>"; };
 		045015411CDB093A002FB50D /* CouponError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponError.swift; sourceTree = "<group>"; };
 		045015431CDB0B5D002FB50D /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
+		045305321D0A632A004148A0 /* toodles-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "toodles-Bridging-Header.h"; sourceTree = "<group>"; };
+		045305331D0A632B004148A0 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		045305341D0A632B004148A0 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		045305361D0A64D7004148A0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		04724E771CF1697C00E9D790 /* APICaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		04AFD3411CF275F000FF6DE9 /* UserDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
+		04AFD3431CF282E000FF6DE9 /* APICallerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICallerError.swift; sourceTree = "<group>"; };
 		04E802F71CDDAC9100333179 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		04E802F91CDDB83900333179 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		57C17D57DE6105377A5D8DF2 /* Pods-toodles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-toodles.release.xcconfig"; path = "Pods/Target Support Files/Pods-toodles/Pods-toodles.release.xcconfig"; sourceTree = "<group>"; };
+		A0C0CDE4C69B07AD148257CF /* Pods-toodles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-toodles.debug.xcconfig"; path = "Pods/Target Support Files/Pods-toodles/Pods-toodles.debug.xcconfig"; sourceTree = "<group>"; };
+		BC2EC6DB2058FAFA71D72947 /* Pods_toodles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_toodles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F577E0C223C0F7E40E3EB1A9 /* Pods_toodles.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +99,8 @@
 			children = (
 				045015021CDAD8D1002FB50D /* toodles */,
 				045015011CDAD8D1002FB50D /* Products */,
+				056AF445B2A26E32958B42A8 /* Pods */,
+				9853B47F8F230BECFD785A77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,10 +150,9 @@
 		045015191CDAD8FA002FB50D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				045015051CDAD8D1002FB50D /* FirstViewController.swift */,
-				045015071CDAD8D1002FB50D /* SecondViewController.swift */,
 				04E802F71CDDAC9100333179 /* LogInViewController.swift */,
 				04E802F91CDDB83900333179 /* SignUpViewController.swift */,
+				045305361D0A64D7004148A0 /* MainViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -170,6 +184,7 @@
 				045015311CDAFA08002FB50D /* BusinessContactError.swift */,
 				045015331CDAFA2F002FB50D /* BusinessError.swift */,
 				045015411CDB093A002FB50D /* CouponError.swift */,
+				04AFD3431CF282E000FF6DE9 /* APICallerError.swift */,
 			);
 			name = ErrorTypes;
 			sourceTree = "<group>";
@@ -177,6 +192,7 @@
 		045015451CDC2B52002FB50D /* DataAccessObjects */ = {
 			isa = PBXGroup;
 			children = (
+				04AFD3411CF275F000FF6DE9 /* UserDAO.swift */,
 			);
 			name = DataAccessObjects;
 			sourceTree = "<group>";
@@ -184,6 +200,10 @@
 		045015461CDC2B63002FB50D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				045305331D0A632B004148A0 /* SWRevealViewController.h */,
+				045305341D0A632B004148A0 /* SWRevealViewController.m */,
+				04724E771CF1697C00E9D790 /* APICaller.swift */,
+				045305321D0A632A004148A0 /* toodles-Bridging-Header.h */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -205,6 +225,23 @@
 			name = DatabaseObjects;
 			sourceTree = "<group>";
 		};
+		056AF445B2A26E32958B42A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0C0CDE4C69B07AD148257CF /* Pods-toodles.debug.xcconfig */,
+				57C17D57DE6105377A5D8DF2 /* Pods-toodles.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9853B47F8F230BECFD785A77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC2EC6DB2058FAFA71D72947 /* Pods_toodles.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,9 +249,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 045015141CDAD8D1002FB50D /* Build configuration list for PBXNativeTarget "toodles" */;
 			buildPhases = (
+				7784A16E22895430A89EA12F /* 📦 Check Pods Manifest.lock */,
 				045014FC1CDAD8D1002FB50D /* Sources */,
 				045014FD1CDAD8D1002FB50D /* Frameworks */,
 				045014FE1CDAD8D1002FB50D /* Resources */,
+				DAFC44937414E44BD3814711 /* 📦 Embed Pods Frameworks */,
+				18D4E2F83F6EC8E652830196 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,6 +312,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18D4E2F83F6EC8E652830196 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-toodles/Pods-toodles-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7784A16E22895430A89EA12F /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DAFC44937414E44BD3814711 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-toodles/Pods-toodles-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		045014FC1CDAD8D1002FB50D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -282,22 +370,25 @@
 				045015241CDAE67C002FB50D /* BusinessLocation.swift in Sources */,
 				0450151D1CDAD9C3002FB50D /* BusinessContact.swift in Sources */,
 				04E802FA1CDDB83900333179 /* SignUpViewController.swift in Sources */,
+				045305351D0A632B004148A0 /* SWRevealViewController.m in Sources */,
 				045015441CDB0B5D002FB50D /* NSDateExtension.swift in Sources */,
+				045305371D0A64D7004148A0 /* MainViewController.swift in Sources */,
 				0450152B1CDAF753002FB50D /* State.swift in Sources */,
 				045015341CDAFA2F002FB50D /* BusinessError.swift in Sources */,
 				045015301CDAF9DE002FB50D /* PhoneNumberError.swift in Sources */,
 				045015221CDADFB0002FB50D /* StringExtension.swift in Sources */,
 				045015401CDB039F002FB50D /* DatabaseObject.swift in Sources */,
-				045015081CDAD8D1002FB50D /* SecondViewController.swift in Sources */,
 				045015381CDAFFE6002FB50D /* Booklet.swift in Sources */,
 				045015041CDAD8D1002FB50D /* AppDelegate.swift in Sources */,
 				045015321CDAFA08002FB50D /* BusinessContactError.swift in Sources */,
+				04724E781CF1697C00E9D790 /* APICaller.swift in Sources */,
 				045015361CDAFF6E002FB50D /* Coupon.swift in Sources */,
 				0450153A1CDB0014002FB50D /* CouponUse.swift in Sources */,
 				0450153E1CDB00C7002FB50D /* CouponTag.swift in Sources */,
-				045015061CDAD8D1002FB50D /* FirstViewController.swift in Sources */,
 				0450151B1CDAD98C002FB50D /* Business.swift in Sources */,
 				045015291CDAF731002FB50D /* Country.swift in Sources */,
+				04AFD3441CF282E000FF6DE9 /* APICallerError.swift in Sources */,
+				04AFD3421CF275F000FF6DE9 /* UserDAO.swift in Sources */,
 				04E802F81CDDAC9100333179 /* LogInViewController.swift in Sources */,
 				0450151F1CDADA1B002FB50D /* PhoneNumber.swift in Sources */,
 				045015421CDB093A002FB50D /* CouponError.swift in Sources */,
@@ -414,23 +505,30 @@
 		};
 		045015151CDAD8D1002FB50D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0C0CDE4C69B07AD148257CF /* Pods-toodles.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = toodles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mbv.toodles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "toodles/toodles-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		045015161CDAD8D1002FB50D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57C17D57DE6105377A5D8DF2 /* Pods-toodles.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = toodles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mbv.toodles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "toodles/toodles-Bridging-Header.h";
 			};
 			name = Release;
 		};
