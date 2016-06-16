@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum BusinessError : ErrorType {
-    case InvalidBusinessName
+enum BusinessError : ErrorProtocol {
+    case invalidBusinessName
 }

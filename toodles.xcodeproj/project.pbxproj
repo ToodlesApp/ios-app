@@ -31,13 +31,15 @@
 		045015401CDB039F002FB50D /* DatabaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450153F1CDB039F002FB50D /* DatabaseObject.swift */; };
 		045015421CDB093A002FB50D /* CouponError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015411CDB093A002FB50D /* CouponError.swift */; };
 		045015441CDB0B5D002FB50D /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015431CDB0B5D002FB50D /* NSDateExtension.swift */; };
-		045305351D0A632B004148A0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045305341D0A632B004148A0 /* SWRevealViewController.m */; };
-		045305371D0A64D7004148A0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045305361D0A64D7004148A0 /* MainViewController.swift */; };
 		04724E781CF1697C00E9D790 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04724E771CF1697C00E9D790 /* APICaller.swift */; };
 		04AFD3421CF275F000FF6DE9 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFD3411CF275F000FF6DE9 /* UserDAO.swift */; };
 		04AFD3441CF282E000FF6DE9 /* APICallerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFD3431CF282E000FF6DE9 /* APICallerError.swift */; };
 		04E802F81CDDAC9100333179 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E802F71CDDAC9100333179 /* LogInViewController.swift */; };
 		04E802FA1CDDB83900333179 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E802F91CDDB83900333179 /* SignUpViewController.swift */; };
+		AE74C6521D0E43ED0005ECF2 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE74C6511D0E43ED0005ECF2 /* SettingsTableViewController.swift */; };
+		AE74C6561D0E4DCC0005ECF2 /* MyAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE74C6551D0E4DCC0005ECF2 /* MyAccountTableViewController.swift */; };
+		AE74C65A1D0E57E90005ECF2 /* StartingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE74C6591D0E57E90005ECF2 /* StartingViewController.swift */; };
+		AE74C65C1D0E5EDC0005ECF2 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE74C65B1D0E5EDC0005ECF2 /* ChangePasswordViewController.swift */; };
 		F577E0C223C0F7E40E3EB1A9 /* Pods_toodles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2EC6DB2058FAFA71D72947 /* Pods_toodles.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,10 +70,6 @@
 		0450153F1CDB039F002FB50D /* DatabaseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseObject.swift; sourceTree = "<group>"; };
 		045015411CDB093A002FB50D /* CouponError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponError.swift; sourceTree = "<group>"; };
 		045015431CDB0B5D002FB50D /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
-		045305321D0A632A004148A0 /* toodles-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "toodles-Bridging-Header.h"; sourceTree = "<group>"; };
-		045305331D0A632B004148A0 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		045305341D0A632B004148A0 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		045305361D0A64D7004148A0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		04724E771CF1697C00E9D790 /* APICaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		04AFD3411CF275F000FF6DE9 /* UserDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
 		04AFD3431CF282E000FF6DE9 /* APICallerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICallerError.swift; sourceTree = "<group>"; };
@@ -79,6 +77,10 @@
 		04E802F91CDDB83900333179 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		57C17D57DE6105377A5D8DF2 /* Pods-toodles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-toodles.release.xcconfig"; path = "Pods/Target Support Files/Pods-toodles/Pods-toodles.release.xcconfig"; sourceTree = "<group>"; };
 		A0C0CDE4C69B07AD148257CF /* Pods-toodles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-toodles.debug.xcconfig"; path = "Pods/Target Support Files/Pods-toodles/Pods-toodles.debug.xcconfig"; sourceTree = "<group>"; };
+		AE74C6511D0E43ED0005ECF2 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		AE74C6551D0E4DCC0005ECF2 /* MyAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountTableViewController.swift; sourceTree = "<group>"; };
+		AE74C6591D0E57E90005ECF2 /* StartingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartingViewController.swift; sourceTree = "<group>"; };
+		AE74C65B1D0E5EDC0005ECF2 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		BC2EC6DB2058FAFA71D72947 /* Pods_toodles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_toodles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -123,7 +125,6 @@
 				045015181CDAD8F1002FB50D /* Views */,
 				045015171CDAD8E0002FB50D /* Models */,
 				045015031CDAD8D1002FB50D /* AppDelegate.swift */,
-				045015091CDAD8D1002FB50D /* Main.storyboard */,
 				0450150C1CDAD8D1002FB50D /* Assets.xcassets */,
 				0450150E1CDAD8D1002FB50D /* LaunchScreen.storyboard */,
 				045015111CDAD8D1002FB50D /* Info.plist */,
@@ -143,6 +144,7 @@
 		045015181CDAD8F1002FB50D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				045015091CDAD8D1002FB50D /* Main.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -152,7 +154,10 @@
 			children = (
 				04E802F71CDDAC9100333179 /* LogInViewController.swift */,
 				04E802F91CDDB83900333179 /* SignUpViewController.swift */,
-				045305361D0A64D7004148A0 /* MainViewController.swift */,
+				AE74C6511D0E43ED0005ECF2 /* SettingsTableViewController.swift */,
+				AE74C6551D0E4DCC0005ECF2 /* MyAccountTableViewController.swift */,
+				AE74C6591D0E57E90005ECF2 /* StartingViewController.swift */,
+				AE74C65B1D0E5EDC0005ECF2 /* ChangePasswordViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -200,10 +205,7 @@
 		045015461CDC2B63002FB50D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				045305331D0A632B004148A0 /* SWRevealViewController.h */,
-				045305341D0A632B004148A0 /* SWRevealViewController.m */,
 				04724E771CF1697C00E9D790 /* APICaller.swift */,
-				045305321D0A632A004148A0 /* toodles-Bridging-Header.h */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -272,12 +274,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = mbv;
 				TargetAttributes = {
 					045014FF1CDAD8D1002FB50D = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 4FM6U54YA4;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -368,14 +371,14 @@
 				045015261CDAE6B1002FB50D /* Address.swift in Sources */,
 				0450152E1CDAF9BA002FB50D /* AddressError.swift in Sources */,
 				045015241CDAE67C002FB50D /* BusinessLocation.swift in Sources */,
+				AE74C65C1D0E5EDC0005ECF2 /* ChangePasswordViewController.swift in Sources */,
 				0450151D1CDAD9C3002FB50D /* BusinessContact.swift in Sources */,
 				04E802FA1CDDB83900333179 /* SignUpViewController.swift in Sources */,
-				045305351D0A632B004148A0 /* SWRevealViewController.m in Sources */,
 				045015441CDB0B5D002FB50D /* NSDateExtension.swift in Sources */,
-				045305371D0A64D7004148A0 /* MainViewController.swift in Sources */,
 				0450152B1CDAF753002FB50D /* State.swift in Sources */,
 				045015341CDAFA2F002FB50D /* BusinessError.swift in Sources */,
 				045015301CDAF9DE002FB50D /* PhoneNumberError.swift in Sources */,
+				AE74C65A1D0E57E90005ECF2 /* StartingViewController.swift in Sources */,
 				045015221CDADFB0002FB50D /* StringExtension.swift in Sources */,
 				045015401CDB039F002FB50D /* DatabaseObject.swift in Sources */,
 				045015381CDAFFE6002FB50D /* Booklet.swift in Sources */,
@@ -386,12 +389,14 @@
 				0450153A1CDB0014002FB50D /* CouponUse.swift in Sources */,
 				0450153E1CDB00C7002FB50D /* CouponTag.swift in Sources */,
 				0450151B1CDAD98C002FB50D /* Business.swift in Sources */,
+				AE74C6521D0E43ED0005ECF2 /* SettingsTableViewController.swift in Sources */,
 				045015291CDAF731002FB50D /* Country.swift in Sources */,
 				04AFD3441CF282E000FF6DE9 /* APICallerError.swift in Sources */,
 				04AFD3421CF275F000FF6DE9 /* UserDAO.swift in Sources */,
 				04E802F81CDDAC9100333179 /* LogInViewController.swift in Sources */,
 				0450151F1CDADA1B002FB50D /* PhoneNumber.swift in Sources */,
 				045015421CDB093A002FB50D /* CouponError.swift in Sources */,
+				AE74C6561D0E4DCC0005ECF2 /* MyAccountTableViewController.swift in Sources */,
 				0450153C1CDB0032002FB50D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,14 +512,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A0C0CDE4C69B07AD148257CF /* Pods-toodles.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = toodles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mbv.toodles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "toodles/toodles-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -522,13 +528,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 57C17D57DE6105377A5D8DF2 /* Pods-toodles.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = toodles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mbv.toodles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "toodles/toodles-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

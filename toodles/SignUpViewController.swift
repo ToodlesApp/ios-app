@@ -1,12 +1,5 @@
-//
-//  SignUpViewController.swift
-//  toodles
-//
-//  Created by Justin Madsen on 5/6/16.
-//  Copyright © 2016 mbv. All rights reserved.
-//
-
 import UIKit
+import EZLoadingActivity
 
 class SignUpViewController: UIViewController {
     @IBOutlet weak var txtEmail: UITextField!
@@ -21,7 +14,32 @@ class SignUpViewController: UIViewController {
 
     }
 
-    @IBAction func btnCreateAccount(sender: AnyObject) {
-        performSegueWithIdentifier("backSegue", sender: self)
+    @IBAction func btnCreateAccount(_ sender: AnyObject) {
+        
+        _ = EZLoadingActivity.show("Creating user account...", disableUI: true)
+        
+        let user = User(id: 0, firstName: txtFirstName.text!, lastName: txtLastName.text!, userName: txtUsername.text!, email: txtEmail.text!)
+        
+        UserDAO.createAccount(user, password: txtPassword.text!, passwordConfirmation: txtConfirmPassword.text!, successHandler: accountCreated, failHandler: accountFailedToCreate)
+
+    }
+    
+    func accountCreated(_ user: User) {
+        _ = EZLoadingActivity.hide()
+        user.saveUserAsDefault()
+        let alertController = UIAlertController(title: "Success!", message: "Created account! Please check your email to validate before logging in.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Right on!", style: .default, handler: goBack))
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func goBack(_ alertAction : UIAlertAction) {
+        self.performSegue(withIdentifier: "backSegue", sender: self)
+    }
+    
+    func accountFailedToCreate(_ error: String) {
+        _ = EZLoadingActivity.hide()
+        let alertController = UIAlertController(title: "Data Error", message: error, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
     }
 }

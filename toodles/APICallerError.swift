@@ -8,9 +8,9 @@
 
 import Foundation
 
-enum APICallerError : ErrorType {
-    case ServerReturnedError
-    case ServerReturnedNoData
-    case DeserializerFailed
-    case SerializerFailed
+enum APICallerError : ErrorProtocol {
+    case serverReturnedError
+    case serverReturnedNoData
+    case deserializerFailed
+    case serializerFailed
 }

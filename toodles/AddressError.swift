@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum AddressError : ErrorType {
-    case InvalidAddress1
-    case InvalidAddress2
-    case InvalidCity
-    case InvalidState
-    case InvalidZip
-    case InvalidCountry
+enum AddressError : ErrorProtocol {
+    case invalidAddress1
+    case invalidAddress2
+    case invalidCity
+    case invalidState
+    case invalidZip
+    case invalidCountry
 }

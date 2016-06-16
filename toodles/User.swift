@@ -8,24 +8,51 @@
 
 import Foundation
 
-class User : DatabaseObject {
+class User : NSObject, NSCoding {
     // MARK: Fields
+    var _id: Int!
     var _firstName: String!
     var _lastName: String!
     var _userName: String!
     var _email: String!
     
     // MARK: Constructors
-    init(id : Int, firstName : String, lastName : String, userName : String, email : String) {
-        super.init(id : id)
+    override init() {
         
+    }
+    
+    convenience init(id : Int, firstName : String, lastName : String, userName : String, email : String) {
+        self.init()
+        self.id = id
         self.firstName = firstName
         self.lastName = lastName
         self.userName = userName
         self.email = email
     }
     
+    @objc required convenience init?(coder aDecoder: NSCoder) {
+        self.init()
+        self.id = aDecoder.decodeObject(forKey: "id") as? Int
+        self.firstName = aDecoder.decodeObject(forKey: "firstName") as? String
+        self.lastName = aDecoder.decodeObject(forKey: "lastName") as? String
+        self.userName = aDecoder.decodeObject(forKey: "userName") as? String
+        self.email = aDecoder.decodeObject(forKey: "email") as? String
+    }
+    
+    @objc func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.id, forKey: "id")
+        aCoder.encode(self.firstName, forKey: "firstName")
+        aCoder.encode(self.lastName, forKey: "lastName")
+        aCoder.encode(self.userName, forKey: "userName")
+        aCoder.encode(self.email, forKey: "email")
+    }
+    
     // MARK: Properties
+    var id : Int! {
+        get { return _id }
+        set { _id = newValue }
+    }
+    
     var firstName : String! {
         get { return _firstName }
         set { _firstName = newValue }
@@ -44,6 +71,25 @@ class User : DatabaseObject {
     var email : String! {
         get { return _email }
         set { _email = newValue }
+    }
+    
+    func saveUserAsDefault() {
+        let userData = NSKeyedArchiver.archivedData(withRootObject: self)
+        UserDefaults.standard().set(userData, forKey: "loggedInUser")
+        UserDefaults.standard().synchronize()
+    }
+    
+    static func removeDefaultUser() {
+        UserDefaults.standard().removeObject(forKey: "loggedInUser")
+        
+        UserDefaults.standard().synchronize()
+    }
+    
+    static func getDefaultUser() -> User? {
+        if let userData = UserDefaults.standard().object(forKey: "loggedInUser") as? Data {
+            return NSKeyedUnarchiver.unarchiveObject(with: userData) as? User
+        }
+        return nil
     }
     
 }

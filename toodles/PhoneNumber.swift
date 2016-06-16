@@ -21,15 +21,15 @@ class PhoneNumber {
         let formattedExtensionNumber = extensionNumber.trim()
         
         if !(Int(formattedAreaCode) == nil) || formattedAreaCode.characters.count != 3 {
-            throw PhoneNumberError.InvalidAreaCode
+            throw PhoneNumberError.invalidAreaCode
         }
         
         if !(Int(formattedBaseNumber) == nil) || formattedBaseNumber.characters.count != 7 {
-            throw PhoneNumberError.InvalidBaseNumber
+            throw PhoneNumberError.invalidBaseNumber
         }
         
         if !(Int(formattedExtensionNumber) == nil) {
-            throw PhoneNumberError.InvalidExtensionNumer
+            throw PhoneNumberError.invalidExtensionNumer
         }
         
         self.areaCode = formattedAreaCode

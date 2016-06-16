@@ -12,11 +12,11 @@ class Booklet : DatabaseObject {
     // MARK: Fields
     private var _title : String!
     private var _description : String!
-    private var _startDate : NSDate!
-    private var _endDate : NSDate!
+    private var _startDate : Date!
+    private var _endDate : Date!
     
     // MARK: Constructors
-    init(id: Int, title : String, description : String, startDate : NSDate, endDate : NSDate) {
+    init(id: Int, title : String, description : String, startDate : Date, endDate : Date) {
         super.init(id: id)
         
         self.title = title
@@ -36,12 +36,12 @@ class Booklet : DatabaseObject {
         set { _description = newValue }
     }
     
-    var startDate : NSDate! {
+    var startDate : Date! {
         get { return _startDate }
         set { _startDate = newValue }
     }
     
-    var endDate : NSDate! {
+    var endDate : Date! {
         get { return _endDate }
         set { _endDate = newValue }
     }

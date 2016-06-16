@@ -3,8 +3,16 @@ import Foundation
 class UserDAO {
     
     // MARK: validateCredentials methods
-    static func validateCredentials(username: String, password: String, successHandler: ((User) -> Void)?, failHandler: ((String) -> Void)?) {
-        APICaller.postRequest("validate_credentials", params: ["username" : username, "password" : password], successHandler : {
+    static func validateCredentials(_ username: String, password: String, successHandler: ((User) -> Void)?, failHandler: ((String) -> Void)?) {
+        var params : Data!
+        do {
+            params = try JSONSerialization.data(withJSONObject: ["username" : username, "password" : password], options: .prettyPrinted)
+        } catch let err as NSError{
+            failHandler?(err.debugDescription)
+            return
+        }
+        
+        APICaller.postRequest("validate_credentials", params: params, successHandler : {
             (data) -> Void in
             
             let success = data["valid"] as! Bool
@@ -12,12 +20,12 @@ class UserDAO {
             if success {
                 let userData = data["details"] as! NSDictionary
                 
-                dispatch_async(dispatch_get_main_queue(), {
+                DispatchQueue.main.async(execute: {
                     successHandler?(loadUserFromData(userData))
                 })
             } else {
                 let details = data["details"] as! String
-                dispatch_async(dispatch_get_main_queue(), {
+                DispatchQueue.main.async(execute: {
                     failHandler?(details)
                 })
             }
@@ -25,27 +33,27 @@ class UserDAO {
         }, failHandler : {
             (errorType, error) in
             
-            dispatch_async(dispatch_get_main_queue(), {
+            DispatchQueue.main.async(execute: {
                 failHandler?(getAPICallerErrorMessage(errorType))
             })
         })
     }
     
     // MARK: getUser methods
-    static func getUser(userId: Int) {
+    static func getUser(_ userId: Int) {
         getUser(userId, successHandler: nil)
     }
     
-    static func getUser(userId: Int, successHandler: ((User) -> Void)?) {
+    static func getUser(_ userId: Int, successHandler: ((User) -> Void)?) {
         getUser(userId, successHandler: successHandler, failHandler: nil)
     }
     
-    static func getUser(userId: Int, successHandler: ((User) -> Void)?, failHandler: ((String) -> Void)?) {
+    static func getUser(_ userId: Int, successHandler: ((User) -> Void)?, failHandler: ((String) -> Void)?) {
         APICaller.getRequest("users/1", successHandler: {
             (data) -> Void in
             
             
-            dispatch_async(dispatch_get_main_queue(), {
+            DispatchQueue.main.async(execute: {
                 successHandler?(loadUserFromData(data))
             })
             
@@ -53,19 +61,128 @@ class UserDAO {
             (errorType, error) in
 
             
-            dispatch_async(dispatch_get_main_queue(), {
+            DispatchQueue.main.async(execute: {
                 failHandler?(getAPICallerErrorMessage(errorType))
             })
         })
     }
     
+    // MARK: createAccount methods
+    static func createAccount(_ user: User, password : String, passwordConfirmation : String) {
+        createAccount(user, password: password, passwordConfirmation: passwordConfirmation, successHandler: nil)
+    }
+    
+    static func createAccount(_ user: User, password : String, passwordConfirmation : String, successHandler: ((User) -> Void)?) {
+        createAccount(user, password: password, passwordConfirmation: passwordConfirmation, successHandler: successHandler, failHandler: nil)
+    }
+    
+    static func createAccount(_ user: User, password : String, passwordConfirmation : String, successHandler: ((User) -> Void)?, failHandler: ((String) -> Void)?) {
+        
+        var params : Data!
+        do {
+            params = try JSONSerialization.data(
+                withJSONObject: [
+                    "user" :
+                        [
+                            "first_name" : user.firstName,
+                            "last_name" : user.lastName,
+                            "email" : user.email,
+                            "username" : user.userName,
+                            "password" : password,
+                            "password_confirmation" : passwordConfirmation
+                    ]
+            ], options: .prettyPrinted)
+        } catch let err as NSError{
+            failHandler?(err.debugDescription)
+            return
+        }
+        
+        APICaller.postRequest("users", params: params, successHandler : {
+            (data) -> Void in
+            
+            let created = data["created"] as! Bool
+            
+            if created {
+                let userData = data["details"] as! NSDictionary
+                
+                DispatchQueue.main.async(execute: {
+                    successHandler?(loadUserFromData(userData))
+                })
+            } else {
+//                let errors = data["details"] as! NSDictionary
+//                let details = ""
+//                for (String error in errors) {
+//                    details += "\(error as! String)\n"
+//                }
+                DispatchQueue.main.async(execute: {
+                    failHandler?("Unable to create account!")
+                })
+            }
+            
+            }, failHandler : {
+                (errorType, error) in
+                
+                DispatchQueue.main.async(execute: {
+                    failHandler?(getAPICallerErrorMessage(errorType))
+                })
+        })
+    }
+    
     // MARK: changePassword methods
-//    static func changerPassword
+    static func changePassword(_ userId: Int, password: String, newPassword : String, newPasswordConfirmation : String) {
+        changePassword(userId, password: password, newPassword: newPassword, newPasswordConfirmation: newPasswordConfirmation, successHandler: nil)
+    }
+    
+    static func changePassword(_ userId: Int, password: String, newPassword : String, newPasswordConfirmation : String, successHandler: ((User) -> Void)?) {
+        changePassword(userId, password: password, newPassword: newPassword, newPasswordConfirmation: newPasswordConfirmation, successHandler: successHandler, failHandler: nil)
+    }
+    
+    static func changePassword(_ userId: Int, password: String, newPassword : String, newPasswordConfirmation : String, successHandler: ((User) -> Void)?, failHandler: ((String) -> Void)?) {
+        
+        var params : Data!
+        do {
+            params = try JSONSerialization.data(
+                withJSONObject: [
+                    "password" : password,
+                    "new_password" : newPassword,
+                    "new_password_confirmation" : newPasswordConfirmation
+                ], options: .prettyPrinted)
+        } catch let err as NSError{
+            failHandler?(err.debugDescription)
+            return
+        }
+        
+        APICaller.postRequest("change_password/\(userId)", params: params, successHandler : {
+            (data) -> Void in
+            
+            let updated = data["updated"] as! Bool
+            
+            
+            if updated {
+                let userData = data["details"] as! NSDictionary
+                
+                DispatchQueue.main.async(execute: {
+                    successHandler?(loadUserFromData(userData))
+                })
+            } else {
+                DispatchQueue.main.async(execute: {
+                    failHandler?("Unable to update password!")
+                })
+            }
+            
+            }, failHandler : {
+                (errorType, error) in
+                
+                DispatchQueue.main.async(execute: {
+                    failHandler?(getAPICallerErrorMessage(errorType))
+                })
+        })
+    }
     
     // MARK: forgotPassword methods
     
     // MARK: helper methods
-    static func loadUserFromData(data: NSDictionary) -> User {
+    static func loadUserFromData(_ data: NSDictionary) -> User {
         let id = data["id"] as! Int
         let firstName = data["first_name"] as! String
         let lastName = data["last_name"] as! String
@@ -74,15 +191,15 @@ class UserDAO {
         return User(id: id, firstName: firstName, lastName: lastName, userName: userName, email: email)
     }
     
-    static func getAPICallerErrorMessage(errorType: APICallerError) -> String {
+    static func getAPICallerErrorMessage(_ errorType: APICallerError) -> String {
         switch (errorType) {
-        case .DeserializerFailed:
+        case .deserializerFailed:
             return "Unable to process response from server"
-        case .SerializerFailed:
+        case .serializerFailed:
             return "Unable to process request to server"
-        case .ServerReturnedNoData:
+        case .serverReturnedNoData:
             return "Unable to retrieve data from server"
-        case .ServerReturnedError:
+        case .serverReturnedError:
             return "Error was thrown!"
         }
     }

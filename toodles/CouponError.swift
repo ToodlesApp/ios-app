@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum CouponError : ErrorType {
-    case InvalidTitle
+enum CouponError : ErrorProtocol {
+    case invalidTitle
 }

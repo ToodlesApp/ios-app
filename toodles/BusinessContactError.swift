@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum BusinessContactError : ErrorType {
-    case InvalidFirstName
-    case InvalidLastName
+enum BusinessContactError : ErrorProtocol {
+    case invalidFirstName
+    case invalidLastName
 }

@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum PhoneNumberError : ErrorType {
-    case InvalidAreaCode
-    case InvalidBaseNumber
-    case InvalidExtensionNumer
+enum PhoneNumberError : ErrorProtocol {
+    case invalidAreaCode
+    case invalidBaseNumber
+    case invalidExtensionNumer
 }
