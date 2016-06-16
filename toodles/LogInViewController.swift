@@ -14,8 +14,6 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func btnSignupClicked(_ sender: AnyObject) {
-//        EZLoadingActivity.show("Loading...", disableUI: true)
-//        UserDAO.getUser(1, successHandler: stuff, failHandler: displayError)
         performSegue(withIdentifier: "signUpSegue", sender: self)
     }
     

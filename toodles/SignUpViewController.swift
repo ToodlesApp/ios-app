@@ -8,9 +8,13 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var txtLastName: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtConfirmPassword: UITextField!
+    @IBOutlet weak var lnkLogin: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.lnkLoginTapped))
+        lnkLogin.addGestureRecognizer(tap)
 
     }
 
@@ -33,7 +37,7 @@ class SignUpViewController: UIViewController {
     }
     
     func goBack(_ alertAction : UIAlertAction) {
-        self.performSegue(withIdentifier: "backSegue", sender: self)
+        self.performSegue(withIdentifier: "loginSegue", sender: self)
     }
     
     func accountFailedToCreate(_ error: String) {
@@ -41,5 +45,9 @@ class SignUpViewController: UIViewController {
         let alertController = UIAlertController(title: "Data Error", message: error, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
         present(alertController, animated: true, completion: nil)
+    }
+    
+    func lnkLoginTapped(_ sender:UITapGestureRecognizer) {
+        self.performSegue(withIdentifier: "backSegue", sender: self)
     }
 }

@@ -11,9 +11,6 @@ class MyAccountTableViewController: UITableViewController {
     // MARK: Loading functions
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         if let user = User.getDefaultUser() {
             lblFirstName.text = user.firstName
             lblLastName.text = user.lastName
@@ -26,7 +23,7 @@ class MyAccountTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 4
+        return 5
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

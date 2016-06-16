@@ -40,6 +40,7 @@
 		AE74C6561D0E4DCC0005ECF2 /* MyAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE74C6551D0E4DCC0005ECF2 /* MyAccountTableViewController.swift */; };
 		AE74C65A1D0E57E90005ECF2 /* StartingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE74C6591D0E57E90005ECF2 /* StartingViewController.swift */; };
 		AE74C65C1D0E5EDC0005ECF2 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE74C65B1D0E5EDC0005ECF2 /* ChangePasswordViewController.swift */; };
+		AEECC2671D12596400F9E713 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEECC2661D12596400F9E713 /* EditAccountViewController.swift */; };
 		F577E0C223C0F7E40E3EB1A9 /* Pods_toodles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2EC6DB2058FAFA71D72947 /* Pods_toodles.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		AE74C6551D0E4DCC0005ECF2 /* MyAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountTableViewController.swift; sourceTree = "<group>"; };
 		AE74C6591D0E57E90005ECF2 /* StartingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartingViewController.swift; sourceTree = "<group>"; };
 		AE74C65B1D0E5EDC0005ECF2 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		AEECC2661D12596400F9E713 /* EditAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
 		BC2EC6DB2058FAFA71D72947 /* Pods_toodles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_toodles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 				AE74C6551D0E4DCC0005ECF2 /* MyAccountTableViewController.swift */,
 				AE74C6591D0E57E90005ECF2 /* StartingViewController.swift */,
 				AE74C65B1D0E5EDC0005ECF2 /* ChangePasswordViewController.swift */,
+				AEECC2661D12596400F9E713 /* EditAccountViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				045015401CDB039F002FB50D /* DatabaseObject.swift in Sources */,
 				045015381CDAFFE6002FB50D /* Booklet.swift in Sources */,
 				045015041CDAD8D1002FB50D /* AppDelegate.swift in Sources */,
+				AEECC2671D12596400F9E713 /* EditAccountViewController.swift in Sources */,
 				045015321CDAFA08002FB50D /* BusinessContactError.swift in Sources */,
 				04724E781CF1697C00E9D790 /* APICaller.swift in Sources */,
 				045015361CDAFF6E002FB50D /* Coupon.swift in Sources */,
