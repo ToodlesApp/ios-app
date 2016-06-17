@@ -15,7 +15,7 @@ class UserDAO {
         APICaller.postRequest("validate_credentials", params: params, successHandler : {
             (data) -> Void in
             
-            let success = data["valid"] as! Bool
+            let success = data["success"] as! Bool
             
             if success {
                 let userData = data["details"] as! NSDictionary
@@ -100,9 +100,9 @@ class UserDAO {
         APICaller.postRequest("users", params: params, successHandler : {
             (data) -> Void in
             
-            let created = data["created"] as! Bool
+            let success = data["success"] as! Bool
             
-            if created {
+            if success {
                 let userData = data["details"] as! NSDictionary
                 
                 DispatchQueue.main.async(execute: {
@@ -155,10 +155,9 @@ class UserDAO {
         APICaller.postRequest("change_password/\(userId)", params: params, successHandler : {
             (data) -> Void in
             
-            let updated = data["updated"] as! Bool
+            let success = data["success"] as! Bool
             
-            
-            if updated {
+            if success {
                 let userData = data["details"] as! NSDictionary
                 
                 DispatchQueue.main.async(execute: {
@@ -177,6 +176,10 @@ class UserDAO {
                     failHandler?(getAPICallerErrorMessage(errorType))
                 })
         })
+    }
+    
+    private static func onChangePasswordSucceeded(data : NSDictionary) {
+        
     }
     
     // MARK: forgotPassword methods
