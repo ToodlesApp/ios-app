@@ -169,7 +169,67 @@ class UserDAO {
                 })
             } else {
                 DispatchQueue.main.async(execute: {
-                    failHandler?("Unable to update password!")
+                    if let errorMessage = data["details"] as? String {
+                        failHandler?(errorMessage)
+                    } else {
+                        failHandler?("Unable to update password")
+                    }
+                    
+                })
+            }
+            
+            }, failHandler : {
+                (errorType, error) in
+                
+                DispatchQueue.main.async(execute: {
+                    failHandler?(getAPICallerErrorMessage(errorType))
+                })
+        })
+    }
+    
+    // MARK: changeInfo methods
+    static func changeInfo(_ user : User) {
+        changeInfo(user, successHandler: nil)
+    }
+    
+    static func changeInfo(_ user : User, successHandler: ((User, Bool) -> Void)?) {
+        changeInfo(user, successHandler: successHandler, failHandler: nil)
+    }
+    
+    static func changeInfo(_ user : User, successHandler: ((User, Bool) -> Void)?, failHandler: ((String) -> Void)?) {
+        var params : Data!
+        do {
+            params = try JSONSerialization.data(
+                withJSONObject: [
+                    "first_name" : user.firstName,
+                    "last_name" : user.lastName,
+                    "email" : user.email
+                ], options: .prettyPrinted)
+        } catch let err as NSError{
+            failHandler?(err.debugDescription)
+            return
+        }
+        
+        APICaller.postRequest("change_info/\(user.id)", params: params, httpMethod: "PUT", successHandler : {
+            (data) -> Void in
+            
+            let success = data["success"] as! Bool
+            
+            if success {
+                DispatchQueue.main.async(execute: {
+                    if let userData = data["details"] as? NSDictionary, let user = loadUserFromData(userData) {
+                        successHandler?(user, data["email_changed"] as! Bool)
+                    } else {
+                        failHandler?("Unable to load user from server response")
+                    }
+                })
+            } else {
+                DispatchQueue.main.async(execute: {
+                    if let errorMessage = data["details"] as? String {
+                        failHandler?(errorMessage)
+                    } else {
+                        failHandler?("Unable to update info")
+                    }
                 })
             }
             

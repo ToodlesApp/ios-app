@@ -41,7 +41,7 @@ class LogInViewController: UIViewController {
     }
     
     func lnkForgotPasswordTapped(_ sender:UITapGestureRecognizer) {
-        txtEmail.text = "worked"
+        performSegue(withIdentifier: "forgotPasswordSegue", sender: self)
     }
     
 }

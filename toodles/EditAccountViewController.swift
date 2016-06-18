@@ -37,9 +37,14 @@ class EditAccountViewController: UIViewController {
     }
     
     func onUserValidated(user :User) {
-        _ = EZLoadingActivity.hide()
+        let user = User(id: user.id, firstName: txtFirstName.text!, lastName: txtLastName.text!, email: txtEmail.text!)
+        UserDAO.changeInfo(user, successHandler: onUserInfoChanged, failHandler: displayError)
+    }
+    
+    func onUserInfoChanged(user : User, emailChanged : Bool) {
         user.saveUserAsDefault()
-        _ = self.navigationController?.popViewController(animated: true)
+        _ = EZLoadingActivity.hide()
+        _ = navigationController?.popViewController(animated: true)
     }
     
     func displayError(_ error: String) {

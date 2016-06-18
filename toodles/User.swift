@@ -17,7 +17,11 @@ class User : NSObject, NSCoding {
     
     // MARK: Constructors
     override init() {
-        
+        super.init()
+        self.id = 0
+        self.firstName = ""
+        self.lastName = ""
+        self.email = ""
     }
     
     convenience init(id : Int, firstName : String, lastName : String, email : String) {
@@ -30,10 +34,18 @@ class User : NSObject, NSCoding {
     
     @objc required convenience init?(coder aDecoder: NSCoder) {
         self.init()
-        self.id = aDecoder.decodeObject(forKey: "id") as? Int
-        self.firstName = aDecoder.decodeObject(forKey: "firstName") as? String
-        self.lastName = aDecoder.decodeObject(forKey: "lastName") as? String
-        self.email = aDecoder.decodeObject(forKey: "email") as? String
+        if let id = aDecoder.decodeObject(forKey: "id") as? Int {
+            self.id = id
+        }
+        if let firstName = aDecoder.decodeObject(forKey: "firstName") as? String {
+            self.firstName = firstName
+        }
+        if let lastName = aDecoder.decodeObject(forKey: "lastName") as? String {
+            self.lastName = lastName
+        }
+        if let email = aDecoder.decodeObject(forKey: "email") as? String {
+            self.email = email
+        }
     }
     
     @objc func encode(with aCoder: NSCoder) {
@@ -44,22 +56,22 @@ class User : NSObject, NSCoding {
     }
     
     // MARK: Properties
-    var id : Int! {
+    var id : Int {
         get { return _id }
         set { _id = newValue }
     }
     
-    var firstName : String! {
+    var firstName : String {
         get { return _firstName }
         set { _firstName = newValue }
     }
     
-    var lastName : String! {
+    var lastName : String {
         get { return _lastName }
         set { _lastName = newValue }
     }
     
-    var email : String! {
+    var email : String {
         get { return _email }
         set { _email = newValue }
     }

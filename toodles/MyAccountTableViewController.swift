@@ -10,10 +10,13 @@ class MyAccountTableViewController: UITableViewController {
     // MARK: Loading functions
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidLayoutSubviews() {
         if let user = User.getDefaultUser() {
-            lblFirstName.text = user.firstName
-            lblLastName.text = user.lastName
-            lblEmail.text = user.email
+            self.lblFirstName.text = user.firstName
+            self.lblLastName.text = user.lastName
+            self.lblEmail.text = user.email
         }
     }
     
