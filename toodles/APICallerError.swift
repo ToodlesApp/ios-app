@@ -13,4 +13,5 @@ enum APICallerError : ErrorProtocol {
     case serverReturnedNoData
     case deserializerFailed
     case serializerFailed
+    case invalidResponseStatusCode
 }

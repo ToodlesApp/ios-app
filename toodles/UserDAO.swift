@@ -3,40 +3,42 @@ import Foundation
 class UserDAO {
     
     // MARK: validateCredentials methods
-    static func validateCredentials(_ username: String, password: String, successHandler: ((User) -> Void)?, failHandler: ((String) -> Void)?) {
+    static func validateCredentials(_ email: String, password: String, successHandler: ((User) -> Void)?, failHandler: ((String) -> Void)?) {
         var params : Data!
         do {
-            params = try JSONSerialization.data(withJSONObject: ["username" : username, "password" : password], options: .prettyPrinted)
+            params = try JSONSerialization.data(withJSONObject: ["email" : email, "password" : password], options: .prettyPrinted)
         } catch let err as NSError{
             failHandler?(err.debugDescription)
             return
         }
         
-        APICaller.postRequest("validate_credentials", params: params, successHandler : {
-            (data) -> Void in
-            
-            let success = data["success"] as! Bool
-            
-            if success {
-                let userData = data["details"] as! NSDictionary
+        APICaller.postRequest("validate_credentials", params: params, httpMethod: "POST",
+            successHandler : { (data) -> Void in
+                DispatchQueue.main.async(execute: {
+                    if let success = data["success"] as? Bool {
+                        if success {
+                            if let userData = data["details"] as? NSDictionary, let user = loadUserFromData(userData) {
+                                successHandler?(user)
+                            } else {
+                                failHandler?("Unable to load user from server response")
+                            }
+                        } else {
+                            if let details = data["details"] as? String {
+                                failHandler?(details)
+                            } else {
+                                failHandler?("Invalid response from server")
+                            }
+                        }
+                    }
+                })
+            },
+            failHandler : {
+                (errorType, error) in
                 
                 DispatchQueue.main.async(execute: {
-                    successHandler?(loadUserFromData(userData))
+                    failHandler?(getAPICallerErrorMessage(errorType))
                 })
-            } else {
-                let details = data["details"] as! String
-                DispatchQueue.main.async(execute: {
-                    failHandler?(details)
-                })
-            }
-            
-        }, failHandler : {
-            (errorType, error) in
-            
-            DispatchQueue.main.async(execute: {
-                failHandler?(getAPICallerErrorMessage(errorType))
             })
-        })
     }
     
     // MARK: getUser methods
@@ -49,22 +51,21 @@ class UserDAO {
     }
     
     static func getUser(_ userId: Int, successHandler: ((User) -> Void)?, failHandler: ((String) -> Void)?) {
-        APICaller.getRequest("users/1", successHandler: {
-            (data) -> Void in
-            
-            
-            DispatchQueue.main.async(execute: {
-                successHandler?(loadUserFromData(data))
+        APICaller.getRequest("users/1",
+            successHandler: { (data) -> Void in
+                DispatchQueue.main.async(execute: {
+                    if let userData = data["details"] as? NSDictionary, let user = loadUserFromData(userData) {
+                        successHandler?(user)
+                    } else {
+                        failHandler?("Unable to load user from server response")
+                    }
+                })
+            },
+            failHandler: { (errorType, error) in
+                DispatchQueue.main.async(execute: {
+                    failHandler?(getAPICallerErrorMessage(errorType))
+                })
             })
-            
-        }, failHandler: {
-            (errorType, error) in
-
-            
-            DispatchQueue.main.async(execute: {
-                failHandler?(getAPICallerErrorMessage(errorType))
-            })
-        })
     }
     
     // MARK: createAccount methods
@@ -87,7 +88,6 @@ class UserDAO {
                             "first_name" : user.firstName,
                             "last_name" : user.lastName,
                             "email" : user.email,
-                            "username" : user.userName,
                             "password" : password,
                             "password_confirmation" : passwordConfirmation
                     ]
@@ -97,16 +97,18 @@ class UserDAO {
             return
         }
         
-        APICaller.postRequest("users", params: params, successHandler : {
+        APICaller.postRequest("users", params: params, httpMethod: "POST", successHandler : {
             (data) -> Void in
             
             let success = data["success"] as! Bool
             
             if success {
-                let userData = data["details"] as! NSDictionary
-                
                 DispatchQueue.main.async(execute: {
-                    successHandler?(loadUserFromData(userData))
+                    if let userData = data["details"] as? NSDictionary, let user = loadUserFromData(userData) {
+                        successHandler?(user)
+                    } else {
+                        failHandler?("Unable to load user from server response")
+                    }
                 })
             } else {
 //                let errors = data["details"] as! NSDictionary
@@ -152,16 +154,18 @@ class UserDAO {
             return
         }
         
-        APICaller.postRequest("change_password/\(userId)", params: params, successHandler : {
+        APICaller.postRequest("change_password/\(userId)", params: params, httpMethod: "PUT", successHandler : {
             (data) -> Void in
             
             let success = data["success"] as! Bool
             
             if success {
-                let userData = data["details"] as! NSDictionary
-                
                 DispatchQueue.main.async(execute: {
-                    successHandler?(loadUserFromData(userData))
+                    if let userData = data["details"] as? NSDictionary, let user = loadUserFromData(userData) {
+                        successHandler?(user)
+                    } else {
+                        failHandler?("Unable to load user from server response")
+                    }
                 })
             } else {
                 DispatchQueue.main.async(execute: {
@@ -178,20 +182,14 @@ class UserDAO {
         })
     }
     
-    private static func onChangePasswordSucceeded(data : NSDictionary) {
-        
-    }
-    
     // MARK: forgotPassword methods
     
     // MARK: helper methods
-    static func loadUserFromData(_ data: NSDictionary) -> User {
-        let id = data["id"] as! Int
-        let firstName = data["first_name"] as! String
-        let lastName = data["last_name"] as! String
-        let email = data["email"] as! String
-        let userName = data["username"] as! String
-        return User(id: id, firstName: firstName, lastName: lastName, userName: userName, email: email)
+    static func loadUserFromData(_ data: NSDictionary) -> User? {
+        if let id = data["id"] as? Int, let firstName = data["first_name"] as? String, let lastName = data["last_name"] as? String, let email = data["email"] as? String {
+            return User(id: id, firstName: firstName, lastName: lastName, email: email)
+        }
+        return nil
     }
     
     static func getAPICallerErrorMessage(_ errorType: APICallerError) -> String {
@@ -204,6 +202,8 @@ class UserDAO {
             return "Unable to retrieve data from server"
         case .serverReturnedError:
             return "Error was thrown!"
+        case .invalidResponseStatusCode:
+            return "Invalid response status code from server"
         }
     }
     

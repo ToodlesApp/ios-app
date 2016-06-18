@@ -38,17 +38,17 @@ class APICaller {
     
     
     // MARK: postRequest methods
-    static func postRequest(_ method: String, params: Data) {
-        postRequest(method, params: params, successHandler: nil)
+    static func postRequest(_ method: String, params: Data, httpMethod: String) {
+        postRequest(method, params: params, httpMethod: httpMethod, successHandler: nil)
     }
     
-    static func postRequest(_ method: String, params: Data, successHandler: ((NSDictionary) -> Void)?) {
-        postRequest(method, params: params, successHandler: successHandler, failHandler: nil)
+    static func postRequest(_ method: String, params: Data, httpMethod: String, successHandler: ((NSDictionary) -> Void)?) {
+        postRequest(method, params: params, httpMethod: httpMethod, successHandler: successHandler, failHandler: nil)
     }
     
-    static func postRequest(_ method: String, params: Data, successHandler: ((NSDictionary) -> Void)?, failHandler: ((APICallerError, NSError?) -> Void)?) {
+    static func postRequest(_ method: String, params: Data, httpMethod: String, successHandler: ((NSDictionary) -> Void)?, failHandler: ((APICallerError, NSError?) -> Void)?) {
         var request = URLRequest(url: URL(string: "\(TOODLES_URL)\(method)")!, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
-        request.httpMethod = "POST"
+        request.httpMethod = httpMethod
         request.allHTTPHeaderFields = ["content-type": "application/json",
                                        "cache-control": "no-cache"]
         request.httpBody = params
@@ -68,10 +68,16 @@ class APICaller {
             return
         }
         
-        guard let _ = response as? HTTPURLResponse, receivedData = data else {
+        guard let httpResponse = response as? HTTPURLResponse, receivedData = data else {
             failHandler?(.serverReturnedNoData, nil)
             return
         }
+        
+        if httpResponse.statusCode < 200 || httpResponse.statusCode > 300 {
+            failHandler?(.invalidResponseStatusCode, nil)
+            return
+        }
+        
         
         do {
             let json = try JSONSerialization.jsonObject(with: receivedData, options: .allowFragments) as? NSDictionary

@@ -64,7 +64,7 @@
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Y1K-CP-LJI">
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="BDr-K2-i3s">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="BDr-K2-i3s">
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="4hd-ko-g91"/>
                                                             <constraint firstAttribute="width" constant="250" id="Vzm-dd-vBv"/>
@@ -152,8 +152,8 @@
                     </view>
                     <connections>
                         <outlet property="lnkForgotPassword" destination="G2G-2n-4L5" id="3Vg-XT-ZpJ"/>
+                        <outlet property="txtEmail" destination="BDr-K2-i3s" id="nYf-HR-8OI"/>
                         <outlet property="txtPassword" destination="EUa-Nk-C1R" id="riG-93-LhC"/>
-                        <outlet property="txtUsername" destination="BDr-K2-i3s" id="CxH-5a-xzB"/>
                         <segue destination="ztu-mG-eUf" kind="show" identifier="signUpSegue" animates="NO" id="iu2-4r-DeR"/>
                         <segue destination="rq8-C5-h4k" kind="show" identifier="loginSegue" id="DIR-2X-BCY"/>
                     </connections>
@@ -621,31 +621,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="User Name" id="eAV-6j-CpQ">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="X5q-8V-70w" style="IBUITableViewCellStyleDefault" id="csY-Tg-AzN">
-                                        <rect key="frame" x="0.0" y="258" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="csY-Tg-AzN" id="8zR-yX-YXK">
-                                            <frame key="frameInset" width="375" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X5q-8V-70w">
-                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Email" id="mQD-5x-bqN">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="uZH-rE-qaI" style="IBUITableViewCellStyleDefault" id="jtb-9v-eof">
-                                        <rect key="frame" x="0.0" y="359" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="258" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jtb-9v-eof" id="rjZ-yO-O5T">
                                             <frame key="frameInset" width="375" height="43"/>
@@ -666,7 +645,7 @@
                             <tableViewSection id="vGS-AM-wtc">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="KLX-9c-rSb" detailTextLabel="Ha8-Vb-sgp" style="IBUITableViewCellStyleValue1" id="tYC-eB-181">
-                                        <rect key="frame" x="0.0" y="439" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="338" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tYC-eB-181" id="kcf-q8-Lcw">
                                             <frame key="frameInset" width="375" height="43"/>
@@ -704,7 +683,6 @@
                         <outlet property="lblEmail" destination="uZH-rE-qaI" id="YSa-eF-mBV"/>
                         <outlet property="lblFirstName" destination="SZ5-UX-i1r" id="F5g-Jw-5TY"/>
                         <outlet property="lblLastName" destination="zYd-yY-EL7" id="byR-8Q-yFd"/>
-                        <outlet property="lblUsername" destination="X5q-8V-70w" id="t0h-Y9-hvu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOU-hi-pgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -738,10 +716,6 @@
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GeX-Vs-o2n">
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
-                                                    </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kym-YM-THv">
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8oT-5N-qeT">
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -813,7 +787,6 @@
                         <outlet property="txtFirstName" destination="8oT-5N-qeT" id="6Vz-4u-jkJ"/>
                         <outlet property="txtLastName" destination="VhH-5t-zCi" id="qpy-nx-OVb"/>
                         <outlet property="txtPassword" destination="bcb-qe-kfw" id="eSs-Na-G1M"/>
-                        <outlet property="txtUsername" destination="kym-YM-THv" id="6fL-6n-Hy8"/>
                         <segue destination="FPW-ah-Wd1" kind="show" identifier="backSegue" animates="NO" id="Tos-8g-IE7"/>
                         <segue destination="rq8-C5-h4k" kind="show" identifier="loginSegue" id="5Rm-BK-Kcx"/>
                     </connections>

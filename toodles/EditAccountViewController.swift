@@ -33,7 +33,7 @@ class EditAccountViewController: UIViewController {
         
         _ = EZLoadingActivity.show("Updating account", disableUI: true)
         
-        UserDAO.validateCredentials(user.userName, password: txtPassword.text!, successHandler: onUserValidated, failHandler: displayError)
+        UserDAO.validateCredentials(user.email, password: txtPassword.text!, successHandler: onUserValidated, failHandler: displayError)
     }
     
     func onUserValidated(user :User) {

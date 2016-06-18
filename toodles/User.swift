@@ -13,7 +13,6 @@ class User : NSObject, NSCoding {
     var _id: Int!
     var _firstName: String!
     var _lastName: String!
-    var _userName: String!
     var _email: String!
     
     // MARK: Constructors
@@ -21,12 +20,11 @@ class User : NSObject, NSCoding {
         
     }
     
-    convenience init(id : Int, firstName : String, lastName : String, userName : String, email : String) {
+    convenience init(id : Int, firstName : String, lastName : String, email : String) {
         self.init()
         self.id = id
         self.firstName = firstName
         self.lastName = lastName
-        self.userName = userName
         self.email = email
     }
     
@@ -35,7 +33,6 @@ class User : NSObject, NSCoding {
         self.id = aDecoder.decodeObject(forKey: "id") as? Int
         self.firstName = aDecoder.decodeObject(forKey: "firstName") as? String
         self.lastName = aDecoder.decodeObject(forKey: "lastName") as? String
-        self.userName = aDecoder.decodeObject(forKey: "userName") as? String
         self.email = aDecoder.decodeObject(forKey: "email") as? String
     }
     
@@ -43,7 +40,6 @@ class User : NSObject, NSCoding {
         aCoder.encode(self.id, forKey: "id")
         aCoder.encode(self.firstName, forKey: "firstName")
         aCoder.encode(self.lastName, forKey: "lastName")
-        aCoder.encode(self.userName, forKey: "userName")
         aCoder.encode(self.email, forKey: "email")
     }
     
@@ -61,11 +57,6 @@ class User : NSObject, NSCoding {
     var lastName : String! {
         get { return _lastName }
         set { _lastName = newValue }
-    }
-    
-    var userName : String! {
-        get { return _userName }
-        set { _userName = newValue }
     }
     
     var email : String! {

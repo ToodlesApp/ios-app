@@ -6,7 +6,6 @@ class MyAccountTableViewController: UITableViewController {
     @IBOutlet weak var lblFirstName: UILabel!
     @IBOutlet weak var lblLastName: UILabel!
     @IBOutlet weak var lblEmail: UILabel!
-    @IBOutlet weak var lblUsername: UILabel!
 
     // MARK: Loading functions
     override func viewDidLoad() {
@@ -15,7 +14,6 @@ class MyAccountTableViewController: UITableViewController {
             lblFirstName.text = user.firstName
             lblLastName.text = user.lastName
             lblEmail.text = user.email
-            lblUsername.text = user.userName
         }
     }
     
@@ -23,7 +21,7 @@ class MyAccountTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 5
+        return 4
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
