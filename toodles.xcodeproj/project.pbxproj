@@ -31,11 +31,14 @@
 		045015401CDB039F002FB50D /* DatabaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450153F1CDB039F002FB50D /* DatabaseObject.swift */; };
 		045015421CDB093A002FB50D /* CouponError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015411CDB093A002FB50D /* CouponError.swift */; };
 		045015441CDB0B5D002FB50D /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045015431CDB0B5D002FB50D /* NSDateExtension.swift */; };
+		04565FCE1D1F83F800BFE94B /* CouponDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04565FCD1D1F83F800BFE94B /* CouponDAO.swift */; };
 		04724E781CF1697C00E9D790 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04724E771CF1697C00E9D790 /* APICaller.swift */; };
 		04AFD3421CF275F000FF6DE9 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFD3411CF275F000FF6DE9 /* UserDAO.swift */; };
 		04AFD3441CF282E000FF6DE9 /* APICallerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFD3431CF282E000FF6DE9 /* APICallerError.swift */; };
 		04E802F81CDDAC9100333179 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E802F71CDDAC9100333179 /* LogInViewController.swift */; };
 		04E802FA1CDDB83900333179 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E802F91CDDB83900333179 /* SignUpViewController.swift */; };
+		04F72B861D1E1B8500BE4DB7 /* CouponSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F72B851D1E1B8500BE4DB7 /* CouponSearchViewController.swift */; };
+		04F72B881D1E40A900BE4DB7 /* CouponCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F72B871D1E40A900BE4DB7 /* CouponCollectionViewCell.swift */; };
 		AE74C6521D0E43ED0005ECF2 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE74C6511D0E43ED0005ECF2 /* SettingsTableViewController.swift */; };
 		AE74C6561D0E4DCC0005ECF2 /* MyAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE74C6551D0E4DCC0005ECF2 /* MyAccountTableViewController.swift */; };
 		AE74C65A1D0E57E90005ECF2 /* StartingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE74C6591D0E57E90005ECF2 /* StartingViewController.swift */; };
@@ -71,11 +74,14 @@
 		0450153F1CDB039F002FB50D /* DatabaseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseObject.swift; sourceTree = "<group>"; };
 		045015411CDB093A002FB50D /* CouponError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponError.swift; sourceTree = "<group>"; };
 		045015431CDB0B5D002FB50D /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
+		04565FCD1D1F83F800BFE94B /* CouponDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponDAO.swift; sourceTree = "<group>"; };
 		04724E771CF1697C00E9D790 /* APICaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		04AFD3411CF275F000FF6DE9 /* UserDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
 		04AFD3431CF282E000FF6DE9 /* APICallerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICallerError.swift; sourceTree = "<group>"; };
 		04E802F71CDDAC9100333179 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		04E802F91CDDB83900333179 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		04F72B851D1E1B8500BE4DB7 /* CouponSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponSearchViewController.swift; sourceTree = "<group>"; };
+		04F72B871D1E40A900BE4DB7 /* CouponCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponCollectionViewCell.swift; sourceTree = "<group>"; };
 		57C17D57DE6105377A5D8DF2 /* Pods-toodles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-toodles.release.xcconfig"; path = "Pods/Target Support Files/Pods-toodles/Pods-toodles.release.xcconfig"; sourceTree = "<group>"; };
 		A0C0CDE4C69B07AD148257CF /* Pods-toodles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-toodles.debug.xcconfig"; path = "Pods/Target Support Files/Pods-toodles/Pods-toodles.debug.xcconfig"; sourceTree = "<group>"; };
 		AE74C6511D0E43ED0005ECF2 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				045015091CDAD8D1002FB50D /* Main.storyboard */,
+				04F72B871D1E40A900BE4DB7 /* CouponCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -161,6 +168,7 @@
 				AE74C6591D0E57E90005ECF2 /* StartingViewController.swift */,
 				AE74C65B1D0E5EDC0005ECF2 /* ChangePasswordViewController.swift */,
 				AEECC2661D12596400F9E713 /* EditAccountViewController.swift */,
+				04F72B851D1E1B8500BE4DB7 /* CouponSearchViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -201,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				04AFD3411CF275F000FF6DE9 /* UserDAO.swift */,
+				04565FCD1D1F83F800BFE94B /* CouponDAO.swift */,
 			);
 			name = DataAccessObjects;
 			sourceTree = "<group>";
@@ -375,16 +384,19 @@
 				0450152E1CDAF9BA002FB50D /* AddressError.swift in Sources */,
 				045015241CDAE67C002FB50D /* BusinessLocation.swift in Sources */,
 				AE74C65C1D0E5EDC0005ECF2 /* ChangePasswordViewController.swift in Sources */,
+				04565FCE1D1F83F800BFE94B /* CouponDAO.swift in Sources */,
 				0450151D1CDAD9C3002FB50D /* BusinessContact.swift in Sources */,
 				04E802FA1CDDB83900333179 /* SignUpViewController.swift in Sources */,
 				045015441CDB0B5D002FB50D /* NSDateExtension.swift in Sources */,
 				0450152B1CDAF753002FB50D /* State.swift in Sources */,
+				04F72B861D1E1B8500BE4DB7 /* CouponSearchViewController.swift in Sources */,
 				045015341CDAFA2F002FB50D /* BusinessError.swift in Sources */,
 				045015301CDAF9DE002FB50D /* PhoneNumberError.swift in Sources */,
 				AE74C65A1D0E57E90005ECF2 /* StartingViewController.swift in Sources */,
 				045015221CDADFB0002FB50D /* StringExtension.swift in Sources */,
 				045015401CDB039F002FB50D /* DatabaseObject.swift in Sources */,
 				045015381CDAFFE6002FB50D /* Booklet.swift in Sources */,
+				04F72B881D1E40A900BE4DB7 /* CouponCollectionViewCell.swift in Sources */,
 				045015041CDAD8D1002FB50D /* AppDelegate.swift in Sources */,
 				AEECC2671D12596400F9E713 /* EditAccountViewController.swift in Sources */,
 				045015321CDAFA08002FB50D /* BusinessContactError.swift in Sources */,
