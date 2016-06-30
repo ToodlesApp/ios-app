@@ -8,17 +8,17 @@
 
 import Foundation
 
-class Booklet : DatabaseObject {
+class Booklet {
     // MARK: Fields
+    private var _id : Int!
     private var _title : String!
     private var _description : String!
     private var _startDate : Date!
     private var _endDate : Date!
     
     // MARK: Constructors
-    init(id: Int, title : String, description : String, startDate : Date, endDate : Date) {
-        super.init(id: id)
-        
+    init(id : Int, title : String, description : String, startDate : Date, endDate : Date) {
+        self.id = id
         self.title = title
         self.description = description
         self.startDate = startDate
@@ -26,6 +26,11 @@ class Booklet : DatabaseObject {
     }
     
     // MARK: Properties
+    var id : Int!{
+        get { return _id }
+        set { _id = newValue }
+    }
+    
     var title : String! {
         get { return _title }
         set { _title = newValue }

@@ -39,6 +39,9 @@
 		04E802FA1CDDB83900333179 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E802F91CDDB83900333179 /* SignUpViewController.swift */; };
 		04F72B861D1E1B8500BE4DB7 /* CouponSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F72B851D1E1B8500BE4DB7 /* CouponSearchViewController.swift */; };
 		04F72B881D1E40A900BE4DB7 /* CouponCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F72B871D1E40A900BE4DB7 /* CouponCollectionViewCell.swift */; };
+		AE1713881D24C44F0070E27A /* BookletSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1713871D24C44F0070E27A /* BookletSearchViewController.swift */; };
+		AE17138A1D24C64B0070E27A /* BookletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1713891D24C64B0070E27A /* BookletTableViewCell.swift */; };
+		AE17138C1D24C7890070E27A /* BookletDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17138B1D24C7890070E27A /* BookletDAO.swift */; };
 		AE74C6521D0E43ED0005ECF2 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE74C6511D0E43ED0005ECF2 /* SettingsTableViewController.swift */; };
 		AE74C6561D0E4DCC0005ECF2 /* MyAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE74C6551D0E4DCC0005ECF2 /* MyAccountTableViewController.swift */; };
 		AE74C65A1D0E57E90005ECF2 /* StartingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE74C6591D0E57E90005ECF2 /* StartingViewController.swift */; };
@@ -84,6 +87,9 @@
 		04F72B871D1E40A900BE4DB7 /* CouponCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponCollectionViewCell.swift; sourceTree = "<group>"; };
 		57C17D57DE6105377A5D8DF2 /* Pods-toodles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-toodles.release.xcconfig"; path = "Pods/Target Support Files/Pods-toodles/Pods-toodles.release.xcconfig"; sourceTree = "<group>"; };
 		A0C0CDE4C69B07AD148257CF /* Pods-toodles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-toodles.debug.xcconfig"; path = "Pods/Target Support Files/Pods-toodles/Pods-toodles.debug.xcconfig"; sourceTree = "<group>"; };
+		AE1713871D24C44F0070E27A /* BookletSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookletSearchViewController.swift; sourceTree = "<group>"; };
+		AE1713891D24C64B0070E27A /* BookletTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookletTableViewCell.swift; sourceTree = "<group>"; };
+		AE17138B1D24C7890070E27A /* BookletDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookletDAO.swift; sourceTree = "<group>"; };
 		AE74C6511D0E43ED0005ECF2 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		AE74C6551D0E4DCC0005ECF2 /* MyAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountTableViewController.swift; sourceTree = "<group>"; };
 		AE74C6591D0E57E90005ECF2 /* StartingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartingViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 				045015181CDAD8F1002FB50D /* Views */,
 				045015171CDAD8E0002FB50D /* Models */,
 				045015031CDAD8D1002FB50D /* AppDelegate.swift */,
+				045015091CDAD8D1002FB50D /* Main.storyboard */,
 				0450150C1CDAD8D1002FB50D /* Assets.xcassets */,
 				0450150E1CDAD8D1002FB50D /* LaunchScreen.storyboard */,
 				045015111CDAD8D1002FB50D /* Info.plist */,
@@ -152,8 +159,8 @@
 		045015181CDAD8F1002FB50D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				045015091CDAD8D1002FB50D /* Main.storyboard */,
 				04F72B871D1E40A900BE4DB7 /* CouponCollectionViewCell.swift */,
+				AE1713891D24C64B0070E27A /* BookletTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -169,6 +176,7 @@
 				AE74C65B1D0E5EDC0005ECF2 /* ChangePasswordViewController.swift */,
 				AEECC2661D12596400F9E713 /* EditAccountViewController.swift */,
 				04F72B851D1E1B8500BE4DB7 /* CouponSearchViewController.swift */,
+				AE1713871D24C44F0070E27A /* BookletSearchViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -210,6 +218,7 @@
 			children = (
 				04AFD3411CF275F000FF6DE9 /* UserDAO.swift */,
 				04565FCD1D1F83F800BFE94B /* CouponDAO.swift */,
+				AE17138B1D24C7890070E27A /* BookletDAO.swift */,
 			);
 			name = DataAccessObjects;
 			sourceTree = "<group>";
@@ -396,10 +405,12 @@
 				045015221CDADFB0002FB50D /* StringExtension.swift in Sources */,
 				045015401CDB039F002FB50D /* DatabaseObject.swift in Sources */,
 				045015381CDAFFE6002FB50D /* Booklet.swift in Sources */,
+				AE17138A1D24C64B0070E27A /* BookletTableViewCell.swift in Sources */,
 				04F72B881D1E40A900BE4DB7 /* CouponCollectionViewCell.swift in Sources */,
 				045015041CDAD8D1002FB50D /* AppDelegate.swift in Sources */,
 				AEECC2671D12596400F9E713 /* EditAccountViewController.swift in Sources */,
 				045015321CDAFA08002FB50D /* BusinessContactError.swift in Sources */,
+				AE17138C1D24C7890070E27A /* BookletDAO.swift in Sources */,
 				04724E781CF1697C00E9D790 /* APICaller.swift in Sources */,
 				045015361CDAFF6E002FB50D /* Coupon.swift in Sources */,
 				0450153A1CDB0014002FB50D /* CouponUse.swift in Sources */,
@@ -411,6 +422,7 @@
 				04AFD3421CF275F000FF6DE9 /* UserDAO.swift in Sources */,
 				04E802F81CDDAC9100333179 /* LogInViewController.swift in Sources */,
 				0450151F1CDADA1B002FB50D /* PhoneNumber.swift in Sources */,
+				AE1713881D24C44F0070E27A /* BookletSearchViewController.swift in Sources */,
 				045015421CDB093A002FB50D /* CouponError.swift in Sources */,
 				AE74C6561D0E4DCC0005ECF2 /* MyAccountTableViewController.swift in Sources */,
 				0450153C1CDB0032002FB50D /* User.swift in Sources */,
