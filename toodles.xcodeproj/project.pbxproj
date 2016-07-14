@@ -42,6 +42,7 @@
 		0489D74F1D35DF80006F8C10 /* MockBookletDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489D74E1D35DF80006F8C10 /* MockBookletDAO.swift */; };
 		04AFD3421CF275F000FF6DE9 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFD3411CF275F000FF6DE9 /* UserDAO.swift */; };
 		04AFD3441CF282E000FF6DE9 /* APICallerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFD3431CF282E000FF6DE9 /* APICallerError.swift */; };
+		04BB081B1D373DF9008D70B7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BB081A1D373DF9008D70B7 /* Constants.swift */; };
 		04E802F81CDDAC9100333179 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E802F71CDDAC9100333179 /* LogInViewController.swift */; };
 		04E802FA1CDDB83900333179 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E802F91CDDB83900333179 /* SignUpViewController.swift */; };
 		04F72B861D1E1B8500BE4DB7 /* CouponSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F72B851D1E1B8500BE4DB7 /* CouponSearchViewController.swift */; };
@@ -95,6 +96,7 @@
 		0489D74E1D35DF80006F8C10 /* MockBookletDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockBookletDAO.swift; sourceTree = "<group>"; };
 		04AFD3411CF275F000FF6DE9 /* UserDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
 		04AFD3431CF282E000FF6DE9 /* APICallerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICallerError.swift; sourceTree = "<group>"; };
+		04BB081A1D373DF9008D70B7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04E802F71CDDAC9100333179 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		04E802F91CDDB83900333179 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		04F72B851D1E1B8500BE4DB7 /* CouponSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponSearchViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		045015021CDAD8D1002FB50D /* toodles */ = {
 			isa = PBXGroup;
 			children = (
+				04BB08191D373DF1008D70B7 /* Utils */,
 				045015451CDC2B52002FB50D /* DataAccessLayer */,
 				045015271CDAF717002FB50D /* Enums */,
 				045015201CDADF9E002FB50D /* Extensions */,
@@ -291,6 +294,14 @@
 				0489D74A1D35DE5F006F8C10 /* DAOFactory.swift */,
 			);
 			name = Factory;
+			sourceTree = "<group>";
+		};
+		04BB08191D373DF1008D70B7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				04BB081A1D373DF9008D70B7 /* Constants.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		056AF445B2A26E32958B42A8 /* Pods */ = {
@@ -469,6 +480,7 @@
 				0489D74D1D35DF6A006F8C10 /* MockCouponDAO.swift in Sources */,
 				0489D74B1D35DE5F006F8C10 /* DAOFactory.swift in Sources */,
 				0489D7421D35C854006F8C10 /* UserDAOProtocol.swift in Sources */,
+				04BB081B1D373DF9008D70B7 /* Constants.swift in Sources */,
 				045015291CDAF731002FB50D /* Country.swift in Sources */,
 				04AFD3441CF282E000FF6DE9 /* APICallerError.swift in Sources */,
 				04AFD3421CF275F000FF6DE9 /* UserDAO.swift in Sources */,

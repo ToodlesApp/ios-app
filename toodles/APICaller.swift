@@ -10,7 +10,6 @@ import Foundation
 import EZLoadingActivity
 
 class APICaller {
-    static let TOODLES_URL = "http://localhost:3000/"
     
     // MARK: getRequest methods
     static func getRequest(_ method: String) {
