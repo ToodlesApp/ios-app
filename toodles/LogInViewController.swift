@@ -32,7 +32,7 @@ class LogInViewController: UIViewController {
             return
         }
         
-        UserDAO.validateCredentials(txtEmail.text!, password: txtPassword.text!, successHandler: openApp, failHandler: displayError)
+        DAOFactory.getUserDAO().validateCredentials(email: txtEmail.text!, password: txtPassword.text!, successHandler: openApp, failHandler: displayError)
     }
     
     func openApp(_ user: User) {

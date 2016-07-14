@@ -1,6 +1,6 @@
 import Foundation
 
-class CouponDAO : CouponDAOProtocol {
+class MockCouponDAO : CouponDAOProtocol {
     func getCoupons() -> [Coupon] {
         var coupons = [Coupon]()
         

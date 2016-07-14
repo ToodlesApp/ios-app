@@ -20,9 +20,9 @@ class SignUpViewController: UIViewController {
     @IBAction func btnCreateAccount(_ sender: AnyObject) {
         _ = EZLoadingActivity.show("Creating user account...", disableUI: true)
         
-        let user = User(id: 0, firstName: txtFirstName.text!, lastName: txtLastName.text!, email: txtEmail.text!)
+        let user = User(id: 0, firstName: txtFirstName.text!, lastName: txtLastName.text!, email: txtEmail.text!, password: txtPassword.text!)
         
-        UserDAO.createAccount(user, password: txtPassword.text!, passwordConfirmation: txtConfirmPassword.text!, successHandler: accountCreated, failHandler: accountFailedToCreate)
+        DAOFactory.getUserDAO().createAccount(user: user, password: txtPassword.text!, passwordConfirmation: txtConfirmPassword.text!, successHandler: accountCreated, failHandler: accountFailedToCreate)
 
     }
     

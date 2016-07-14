@@ -1,11 +1,3 @@
-//
-//  User.swift
-//  toodles
-//
-//  Created by Justin Madsen on 5/4/16.
-//  Copyright © 2016 mbv. All rights reserved.
-//
-
 import Foundation
 
 class User : NSObject, NSCoding {
@@ -14,6 +6,7 @@ class User : NSObject, NSCoding {
     var _firstName: String!
     var _lastName: String!
     var _email: String!
+    var _password: String!
     
     // MARK: Constructors
     override init() {
@@ -22,14 +15,16 @@ class User : NSObject, NSCoding {
         self.firstName = ""
         self.lastName = ""
         self.email = ""
+        self.password = ""
     }
     
-    convenience init(id : Int, firstName : String, lastName : String, email : String) {
+    convenience init(id : Int, firstName : String, lastName : String, email : String, password : String) {
         self.init()
         self.id = id
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
+        self.password = password
     }
     
     @objc required convenience init?(coder aDecoder: NSCoder) {
@@ -46,6 +41,9 @@ class User : NSObject, NSCoding {
         if let email = aDecoder.decodeObject(forKey: "email") as? String {
             self.email = email
         }
+        if let password = aDecoder.decodeObject(forKey: "password") as? String {
+            self.password = password
+        }
     }
     
     @objc func encode(with aCoder: NSCoder) {
@@ -53,6 +51,7 @@ class User : NSObject, NSCoding {
         aCoder.encode(self.firstName, forKey: "firstName")
         aCoder.encode(self.lastName, forKey: "lastName")
         aCoder.encode(self.email, forKey: "email")
+        aCoder.encode(self.password, forKey: "password")
     }
     
     // MARK: Properties
@@ -74,6 +73,11 @@ class User : NSObject, NSCoding {
     var email : String {
         get { return _email }
         set { _email = newValue }
+    }
+    
+    var password : String {
+        get { return _password }
+        set { _password = newValue }
     }
     
     func saveUserAsDefault() {

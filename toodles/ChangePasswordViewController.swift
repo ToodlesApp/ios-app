@@ -1,11 +1,3 @@
-//
-//  ChangePasswordViewController.swift
-//  toodles
-//
-//  Created by Susan Madsen on 6/12/16.
-//  Copyright © 2016 mbv. All rights reserved.
-//
-
 import UIKit
 import EZLoadingActivity
 
@@ -28,7 +20,7 @@ class ChangePasswordViewController: UIViewController {
         }
         
         _ = EZLoadingActivity.show("Changing password", disableUI: true)
-        UserDAO.changePassword(user.id, password: txtOldPassword.text!, newPassword: txtNewPassword.text!, newPasswordConfirmation: txtNewPasswordConfirmation.text!, successHandler: onPasswordChanged, failHandler: onPasswordFailed)
+        DAOFactory.getUserDAO().changePassword(userId: user.id, password: txtOldPassword.text!, newPassword: txtNewPassword.text!, newPasswordConfirmation: txtNewPasswordConfirmation.text!, successHandler: onPasswordChanged, failHandler: onPasswordFailed)
     }
     
     func onPasswordChanged(_ user : User) {

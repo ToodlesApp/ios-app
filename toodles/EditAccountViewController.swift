@@ -33,12 +33,12 @@ class EditAccountViewController: UIViewController {
         
         _ = EZLoadingActivity.show("Updating account", disableUI: true)
         
-        UserDAO.validateCredentials(user.email, password: txtPassword.text!, successHandler: onUserValidated, failHandler: displayError)
+        DAOFactory.getUserDAO().validateCredentials(email: user.email, password: txtPassword.text!, successHandler: onUserValidated, failHandler: displayError)
     }
     
     func onUserValidated(user :User) {
-        let user = User(id: user.id, firstName: txtFirstName.text!, lastName: txtLastName.text!, email: txtEmail.text!)
-        UserDAO.changeInfo(user, successHandler: onUserInfoChanged, failHandler: displayError)
+        let user = User(id: user.id, firstName: txtFirstName.text!, lastName: txtLastName.text!, email: txtEmail.text!, password: txtPassword.text!)
+        DAOFactory.getUserDAO().changeInfo(user: user, successHandler: onUserInfoChanged, failHandler: displayError)
     }
     
     func onUserInfoChanged(user : User, emailChanged : Bool) {

@@ -1,6 +1,6 @@
 import Foundation
 
-class BookletDAO : BookletDAOProtocol {
+class MockBookletDAO : BookletDAOProtocol {
     func GetBooklets() -> [Booklet] {
         var booklets = [Booklet]()
         

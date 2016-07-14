@@ -14,7 +14,7 @@ class BookletSearchViewController: UIViewController, UITableViewDelegate, UITabl
         tableView.dataSource = self
         searchBar.delegate = self
         
-        booklets = BookletDAO.GetDummyBooklets()
+        booklets = DAOFactory.getBookletDAO().GetBooklets()
         filteredBooklets = booklets
     }
     

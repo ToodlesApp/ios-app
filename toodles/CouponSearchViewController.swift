@@ -17,7 +17,7 @@ class CouponSearchViewController: UIViewController, UICollectionViewDelegate, UI
         searchBar.delegate = self
         searchBar.returnKeyType = .done
         
-        coupons = CouponDAO.getCoupons()
+        coupons = DAOFactory.getCouponDAO().getCoupons()
         filteredCoupons = coupons
     }
     
